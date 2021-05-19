@@ -1,0 +1,218 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+  <style type="text/CSS">
+    .{
+  margin: 0px;
+  padding: 0px;
+}
+
+.combobox {
+background-color:black;
+color: 	#0000ff;
+  font-family:Candara;
+  font-weight:bold;
+}
+
+.red {
+background-color: #BAD3D0;
+}
+
+.imagen {
+    width: 200px;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.barra {
+border-radius: 7px 7px 0 0;
+    border: 1px solid #999;
+    background-color: #00ffff;
+    color: #333;
+    padding: 8px 0 6px 10px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+.contenedor1{
+  margin: auto;
+  width: 1210px; 
+  height: 320px;
+  background-color:#E5EEED;
+}
+
+.contenedor2{
+  margin-left: 5px;
+  width: 196px; 
+  height: 200px;
+  background-color: white;
+}
+</style>
+  <!--<link rel=stylesheet type="text/css" href="pro2.css">-->
+  <meta charset="utf-8"><!-- indicar la codificación de caracteres utilizada  -->
+  <meta name="viewport" content="width=device-width">
+   <title>Laboratorio programacion web</title>
+</head>
+
+<body background="https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">   
+  <div align="center">
+    <img src="data:image/jpeg;base64,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"/>
+  </p>
+  <font color="Black" face="Candara"><strong>Buscar: </font>
+     <input type="search" name="busqueda" placeholder="Xbox, Nintendo, playstation..">
+    <input type="submit" value="Buscar">
+</div> </p>
+<table border=3 width=1218px>
+  <tr bgcolor="Black" > <font color="Black" face="Candara">
+<td width=170px> <select name="Op"  class="combobox">
+  <option value="1"> Categorias</option> 
+   <option value="2">Xbox</option> 
+   <option value="3">Nintendo</option>
+   <option value="4">Play Sattion</option> 
+   <option value="5">DS</option> 
+   <option value="6">PC</option>
+   <option value="7">Accesorios</option>
+  <input type="button" class="boton" value="Ir">
+  </font></form></select>   
+    <td><font color="blue">Ubicanos</td> 
+    <td><font color="blue">Contacto</td>
+    <td><font color="blue">Registrate</td> 
+    <td><font color="blue">Cuenta</td>
+    <td><font color="blue">Carrito</td>
+    </tr> </table> </br> </font>
+
+  <div class="barra" style="cursor: pointer;">Videojuegos</div> 
+<div class="contenedor1" >
+  <div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/205x253/9df78eab33525d08d6e5fb8d27136e95/s/u/super_smash_bros_ultimate_main_45496598709.jpg"></img>
+<p>Super Smash bros Ultimate
+  <font color="red">$1,399</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/205x253/9df78eab33525d08d6e5fb8d27136e95/r/e/re8_xbx_1.jpg"></img>
+<p>Resident Evil Village 
+  <font color="red"></br>$1,699</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/205x253/9df78eab33525d08d6e5fb8d27136e95/n/e/new_pok_mon_snap_1.jpg"></img>
+<p>New Pokemon Snap
+  <font color="red"></br>$1,399</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/205x253/9df78eab33525d08d6e5fb8d27136e95/d/e/demons-souls-ps5_1.jpg"></img>
+<p>Demon Souls
+  <font color="red"></br>$1,799</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/205x253/9df78eab33525d08d6e5fb8d27136e95/s/p/spiderman-ps5_3_1.jpg"></img>
+<p>Spider Man Miles Morales
+  <font color="red"></br>$1,080</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/205x253/9df78eab33525d08d6e5fb8d27136e95/m/k/mk-11-ultimate-xbxs.jpg"></img>
+<p>Mortal Kombat 11 Ultimate Edition 
+  <font color="red">$1,299</font></p></div>
+</div>
+</div>
+</br>
+</br>
+<div class="barra" style="cursor: pointer;"> Consolas </div> 
+<div class="contenedor1" >
+  <div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/205x253/9df78eab33525d08d6e5fb8d27136e95/x/b/xbox1_3_2_1.jpg"></img>
+    <p>Xbox Series X
+    <font color="red">$16,999</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/205x253/9df78eab33525d08d6e5fb8d27136e95/x/b/xbox-series-s.jpg"></img>
+<p><font color="Black">Xbox Series S</font>
+    <font color="red">$8,499</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/228x/9df78eab33525d08d6e5fb8d27136e95/c/o/consola-playstation-5-5_2_2.jpg"></img>
+<p><font color="Black">Play Station 5</font>
+    <font color="red">$13,999</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/228x/9df78eab33525d08d6e5fb8d27136e95/c/o/consola-nintendo-switch-lite-32gb-coral-pink_1.jpg"></img>
+<p><font color="Black">Nintendo Switch Lite 32GB</font>
+    <font color="red">$5,599</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/228x/9df78eab33525d08d6e5fb8d27136e95/c/o/consola-nintendo-switch-11-joy-con-azul-y-rojo-neon.jpg"></img>
+<p><font color="Black">CONSOLA NINTENDO SWITCH 1.1 32GB JOY-CON AZUL Y ROJO NEON</font>
+    <font color="red">$8,499</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/228x/9df78eab33525d08d6e5fb8d27136e95/8/8/885370888492.jpg"></img>
+  <p><font color="Black">XBOX ONE BLANCO 500GB HALO THE MASTER CHIEF COLLECTION</font> 
+    <font color="red">$6,499</font></p></div>
+</div>
+</div>
+    </br>
+    </br>
+<div class="barra" style="cursor: pointer;"> Coleccionables </div> 
+<div class="contenedor1" >
+  <div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/228x/9df78eab33525d08d6e5fb8d27136e95/a/r/ar4g9r4g9r.jpg"></img>
+    <p><font color="Black">POKEMON TRADING CARD GAME</font>
+    </br><font color="Gray"><small><del>$999</del></small>&nbsp;
+	</br><font color="red">$499</font></p></div> 
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/228x/9df78eab33525d08d6e5fb8d27136e95/d/f/dfjhnsdf.jpg"></img>
+<p><font color="Black">FIGURA MYSTERY PACK YOSHI WIND UPS</font>
+</br><font color="Gray"><small><del>$250</del></small>&nbsp;
+  <font color="red"></br>$150</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/228x/9df78eab33525d08d6e5fb8d27136e95/h/f/hfkdxlknd.jpg"></img>
+<p><font color="Black">DECK LEGENDARIO II YU GI OH</font> 
+  <font color="red"></br>$899</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/228x/9df78eab33525d08d6e5fb8d27136e95/f/i/figpin-my-hero-academia-all-might.jpg"></img>
+<p><font color="Black">FIGPIN MY HERO ACADEMIA ALL MIGHT</font>
+  </br><font color="Gray"><small><del>$200</del></small>&nbsp;
+  <font color="red"></br>$149</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;">
+    <img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/228x/9df78eab33525d08d6e5fb8d27136e95/f/i/figura_league_of_legends_fizz.jpg"></img>
+<p><font color="Black">FIGURA LEAGUE OF LEGENDS FIZZ</font>
+  <font color="red"></br>$549</font></p></div>
+</div>
+<div class="contenedor2" style = "float: left">
+  <div class="imagen" style="cursor: pointer;"><img src="https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/228x/9df78eab33525d08d6e5fb8d27136e95/f/e/fesef.jpg"></img>
+<p><font color="Black">FIGURA MORTAL KOMBAT SUB ZERO</font>
+  </br><font color="Gray"><small><del>$799</del></small>&nbsp;
+  <font color="red"></br>$699</font></p></div>
+</div>
+</div>
+    </br>
+    </br>
+    </br>
+  </div>
+</form>
+</body>
+</html>
